@@ -18,11 +18,27 @@
 				}
 			}
 		}catch(PDOException $ex){
-			print("Error authenticating: " . $ex);
+			return false;
 		}
 
 		return false;
 	}
+
+	function new_user($username,$password,$email){
+	    try{
+	        $sqlCommand = "INSERT INTO `customers`(`Nick`, `Password`, `Email`) VALUES ('$username','$password','$email')";
+	        $db = connect();
+	        $input = $db->prepare($sqlCommand);
+	        $input->execute();
+	        $result = $input->fetchAll();
+
+
+	        if($result[0] === false ) return false;
+	            return true;
+        }catch(PDOException $ex){
+	        return false;
+        }
+    }
 
 	function query_database($SQLCommand)
 	{
