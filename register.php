@@ -11,6 +11,7 @@
 		$mail = $reqJson["email"];
 
 		require_once('../../commons/db.php');
+
 		if(new_user($username,$password,$mail)) {
             echo '{';
             echo '   "status":"valid"';
