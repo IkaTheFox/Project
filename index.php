@@ -24,7 +24,7 @@
 
     </span></div><br><br><br><br>
 <div align="center">
-    A game about making your way through an old dungeon, with an intense amnesia.
+    An interactive story about walking through an old dungeon with an intense amnesia...
 </div>
 <br>
 <div class="col-sm-2 col-sm-offset-4"><a href="explore.php" class="btn btn-default">Start The Adventure !</a> </div>
